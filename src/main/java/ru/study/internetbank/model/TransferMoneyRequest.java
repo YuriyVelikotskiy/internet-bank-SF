@@ -2,13 +2,15 @@ package ru.study.internetbank.model;
 
 import java.math.BigDecimal;
 
-public class PutRequest {
+public class TransferMoneyRequest {
     private BigDecimal value;
     private String userId;
+    private String payeeId;
 
-    public PutRequest(BigDecimal value, String userId) {
+    public TransferMoneyRequest(BigDecimal value, String userId, String payeeId) {
         this.value = value;
         this.userId = userId;
+        this.payeeId = payeeId;
     }
 
     public BigDecimal getValue() {
@@ -25,5 +27,13 @@ public class PutRequest {
 
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public String getPayeeId() {
+        return payeeId;
+    }
+
+    public void setPayeeId(String payeeId) {
+        this.payeeId = payeeId;
     }
 }

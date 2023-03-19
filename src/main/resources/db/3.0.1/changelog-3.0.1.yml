@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3.0.1
+      author: a.velikotskiy
+      changes:
+        - tagDatabase:
+            tag: 3.0.1
+        - sqlFile:
+            encoding: utf8
+            path: changes.sql
+            relativeToChangelogFile: true
+      rollback:
+        - sqlFile:
+            encoding: utf8
+            path: rollback.sql
+            relativeToChangelogFile: true
